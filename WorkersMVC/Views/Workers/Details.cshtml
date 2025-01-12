@@ -1,0 +1,62 @@
+﻿@model WorkerEntity
+
+<form asp-action="UpdateWorkerDetails" method="post">
+    <input asp-for="Id" hidden/>
+    <br />
+    <div class="container border p-3">
+        <h1 class="text-primary">Edycja danych pracownika</h1>
+        <hr />
+        <div class="row">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="col-2">
+                <label asp-for="FirstName" class="control-label pt-2" style="font-size:14px;">Imię</label>
+            </div>
+            <div class="col-10 pb-3">
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="col-2">
+                <label asp-for="LastName" class="control-label pt-2" style="font-size:14px;">Nazwisko</label>
+            </div>
+            <div class="col-10 pb-3">
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div class="col-2">
+                <label asp-for="Title" class="control-label pt-2" style="font-size:14px;">Stanowisko</label>
+            </div>
+            <div class="col-10 pb-3">
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="col-2">
+                <label asp-for="Salary" class="control-label pt-2" style="font-size:14px;">Zarobki</label>
+            </div>
+            <div class="col-10 pb-3">
+                <input asp-for="Salary" class="form-control" />
+                <span asp-validation-for="Salary" class="text-danger"></span>
+            </div>
+            <div class="col-2">
+                <label asp-for="EmailAddress" class="control-label pt-2" style="font-size:14px;">Adres e-mail</label>
+            </div>
+            <div class="col-10 pb-3">
+                <input asp-for="EmailAddress" class="form-control" />
+                <span asp-validation-for="EmailAddress" class="text-danger"></span>
+            </div>
+
+            <br />
+            <div class="col-5 offset-2">
+                <a asp-action="Index" asp-controller="Workers" class="btn btn-primary form-control" />Powrót do listy pracowników</a>
+            </div>
+            <div class="col-5">
+                <input type="submit" value="Potwierdź edycję" class="btn btn-success form-control" />
+            </div>
+        </div>
+    </div>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
+
