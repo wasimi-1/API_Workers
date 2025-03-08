@@ -11,7 +11,7 @@ using System.Security.Claims;
 namespace API_Workers.Controllers
 {
     [Route("api/[controller]")]
-    [ApiController]
+    [ApiController] 
     public class UsersController : ControllerBase
     {
         private ApplicationDbContext _db;
